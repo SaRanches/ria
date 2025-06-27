@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Доброе утро ☀️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .sky {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background: linear-gradient(to top, #1a1a40, #333366);
+      animation: skyChange 12s ease-in-out forwards;
+    }
+
+    @keyframes skyChange {
+      0% {
+        background: linear-gradient(to top, #1a1a40, #333366);
+      }
+      30% {
+        background: linear-gradient(to top, #4b3b6d, #6a5acd);
+      }
+      60% {
+        background: linear-gradient(to top, #8a6d9e, #87ceeb);
+      }
+      100% {
+        background: linear-gradient(to top, #ffb88c, #87ceeb);
+      }
+    }
+
+    .sun {
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, #fff700, #ffcc00);
+      border-radius: 50%;
+      animation: sunrise 12s ease-in-out forwards;
+      box-shadow: 0 0 60px 20px rgba(255, 204, 0, 0);
+    }
+
+    @keyframes sunrise {
+      0% {
+        bottom: -100px;
+        box-shadow: 0 0 60px 20px rgba(255, 204, 0, 0);
+      }
+      30% {
+        bottom: 50px;
+        box-shadow: 0 0 60px 20px rgba(255, 204, 0, 0.3);
+      }
+      60% {
+        bottom: 100px;
+        box-shadow: 0 0 60px 20px rgba(255, 204, 0, 0.6);
+      }
+      100% {
+        bottom: 150px;
+        box-shadow: 0 0 60px 20px rgba(255, 204, 0, 0.8);
+      }
+    }
+
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, #2d602d, #4CAF50);
+      animation: groundChange 12s ease-in-out forwards;
+    }
+
+    @keyframes groundChange {
+      from {
+        background: linear-gradient(to top, #0d260d, #1a3b1a);
+      }
+      to {
+        background: linear-gradient(to top, #2d602d, #4CAF50);
+      }
+    }
+
+    .message {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px 30px;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      color: #333;
+      text-align: center;
+      max-width: 80%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fadeIn 8s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+      }
+      70% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="sun"></div>
+    <div class="ground"></div>
+    <div class="message">
+      Доброе утро, моя звёздочка 🌞<br>
+      Пусть этот день будет таким же прекрасным, как твоя улыбка 💛
+    </div>
+  </div>
+</body>
+</html>
